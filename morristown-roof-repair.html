@@ -238,7 +238,15 @@
                     e.preventDefault();
                     const formData = new FormData(this);
                     fetch("/", { method: "POST", body: new URLSearchParams(formData).toString(), headers: { "Content-Type": "application/x-www-form-urlencoded" } })
-                        .then(() => { modal.style.display = "block"; document.body.style.overflow = "hidden"; form.reset(); })
+                        .then(() => {
+                            window.dataLayer = window.dataLayer || [];
+                            window.dataLayer.push({ event: "form_submit" });
+                            document.body.setAttribute("data-form-status", "form_submit");
+                            window.dispatchEvent(new CustomEvent("form-submit-success"));
+                            modal.style.display = "block";
+                            document.body.style.overflow = "hidden";
+                            form.reset();
+                        })
                         .catch(() => { modal.style.display = "block"; document.body.style.overflow = "hidden"; });
                 });
             });
