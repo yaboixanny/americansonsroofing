@@ -991,7 +991,9 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.15rem;
+        line-height: 1.08;
+        margin-bottom: 20px;
     }
 
     .section-header h2 {
@@ -1069,6 +1071,20 @@ footer {
     .hero-subtext,
     .trust-pill {
         text-align: left;
+    }
+
+    .hero-subtext {
+        font-size: 1.05rem;
+        margin-bottom: 32px;
+    }
+
+    .hero-subtext li {
+        gap: 8px !important;
+    }
+
+    .hero-subtext svg {
+        width: 20px;
+        height: 20px;
     }
 
     footer {
