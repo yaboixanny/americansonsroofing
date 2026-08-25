@@ -43,7 +43,7 @@
             <div class="logo"><img src="americansons-logo.png" alt="American Sons Professionals logo" class="logo-img"></div>
             <div class="header-right">
                 <div class="status-badge"><span class="pulse-dot"></span>Available Now</div>
-                <a href="tel:2013965509" class="phone-link" onclick="return gtag_report_conversion('tel:2013965509');">(201) 396-5509</a>
+                <a href="tel:2013965509" onclick="return gtag_report_conversion('tel:2013965509');" class="phone-link">(201) 396-5509</a>
             </div>
         </div>
     </header>
@@ -62,8 +62,8 @@
                     </ul>
                     <div class="hero-actions-container">
                         <a href="#quote-form" class="btn btn-primary btn-cta-main desktop-only">Get Your Estimate</a>
-                        <a href="tel:2013965509" class="btn btn-secondary btn-cta-text desktop-only">Call (201) 396-5509</a>
-                        <a href="tel:2013965509" class="btn btn-primary btn-cta-main mobile-only">Call (201) 396-5509</a>
+                        <a href="tel:2013965509" onclick="return gtag_report_conversion('tel:2013965509');" class="btn btn-secondary btn-cta-text desktop-only">Call (201) 396-5509</a>
+                        <a href="tel:2013965509" onclick="return gtag_report_conversion('tel:2013965509');" class="btn btn-primary btn-cta-main mobile-only">Call (201) 396-5509</a>
                         <a href="sms:2013965509" class="btn btn-secondary btn-cta-text mobile-only"><svg class="phone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>Text Us</a>
                     </div>
                 </div>
@@ -154,6 +154,12 @@
     <div id="success-modal" class="modal"><div class="modal-content"><div class="modal-header"><span class="close-modal">&times;</span></div><div class="modal-body" style="text-align:center; padding:20px 10px 40px;"><div class="success-icon">✓</div><h3 style="font-size:2rem; color:var(--primary); margin-bottom:15px;">Request Received</h3><p style="font-size:1.15rem; color:var(--text-light); line-height:1.6; max-width:420px; margin:0 auto 30px;">Thanks for reaching out. Your estimate request has been sent and someone can follow up shortly.</p><button class="btn btn-primary close-modal-btn" style="width:100%; border-radius:50px; padding:15px;">Close</button></div></div></div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    gtag_report_conversion(this.href);
+                });
+            });
             const leadForms = document.querySelectorAll("[data-lead-form]");
             const modal = document.getElementById("success-modal");
             const closeButtons = document.querySelectorAll(".close-modal, .close-modal-btn");
