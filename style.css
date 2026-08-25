@@ -220,6 +220,10 @@ html, body {
     height: 20px;
 }
 
+.btn-call-icon .phone-icon {
+    display: none;
+}
+
 @keyframes ring {
     0% {
         transform: rotate(0deg);
@@ -1002,6 +1006,35 @@ footer {
         font-size: 2rem;
     }
 
+    .team-gallery-title,
+    .faq-title {
+        line-height: 0.98;
+    }
+
+    .btn-call-icon .phone-icon {
+        display: block;
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+    }
+
+    .final-cta-title {
+        font-size: 2.2rem;
+        line-height: 1 !important;
+    }
+
+    #final-call-btn-mobile {
+        width: 100%;
+        max-width: 300px;
+        padding: 16px 20px !important;
+        font-size: 1.1rem !important;
+        white-space: nowrap;
+    }
+
+    .final-availability.mobile-only {
+        display: flex !important;
+    }
+
     .review-grid {
         grid-template-columns: 1fr;
     }
@@ -1087,6 +1120,20 @@ footer {
     .hero-subtext svg {
         width: 20px;
         height: 20px;
+    }
+
+    .form-tag {
+        display: none;
+    }
+
+    .form-perks {
+        align-self: stretch;
+        text-align: left;
+    }
+
+    .form-perks li {
+        align-items: flex-start;
+        text-align: left;
     }
 
     footer {
