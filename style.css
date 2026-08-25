@@ -361,7 +361,8 @@ html, body {
 @media (min-width: 769px) {
     .roofing-landing-page .form-tag,
     .roofing-landing-page .hero-availability-widget,
-    .roofing-landing-page .hero-actions-container .btn-cta-main.desktop-only {
+    .roofing-landing-page .hero-actions-container .btn-cta-main.desktop-only,
+    .roofing-landing-page #reviews-text-btn {
         display: none !important;
     }
 
