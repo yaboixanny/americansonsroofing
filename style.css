@@ -1018,9 +1018,14 @@ footer {
         flex-shrink: 0;
     }
 
-    .final-cta-title {
-        font-size: 2.2rem;
+    .roofing-landing-page .final-cta h2 {
+        font-size: 2.4rem !important;
         line-height: 1 !important;
+    }
+
+    .roofing-landing-page .final-cta p {
+        font-size: 1.05rem !important;
+        line-height: 1.55;
     }
 
     #final-call-btn-mobile {
@@ -1099,8 +1104,9 @@ footer {
         box-shadow: 0 8px 20px rgba(201, 91, 43, 0.22);
     }
 
-    .eyebrow {
+    .roofing-landing-page .eyebrow {
         text-align: center;
+        font-size: 0.9rem;
     }
 
     .hero-subtext,
@@ -1122,16 +1128,16 @@ footer {
         height: 20px;
     }
 
-    .form-tag {
+    .roofing-landing-page .form-tag {
         display: none;
     }
 
-    .form-perks {
+    .roofing-landing-page .form-perks {
         align-self: stretch;
         text-align: left;
     }
 
-    .form-perks li {
+    .roofing-landing-page .form-perks li {
         align-items: flex-start;
         text-align: left;
     }
